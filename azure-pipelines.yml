@@ -8,7 +8,7 @@
 jobs:
 
 - job: 'Test'
-  pool:'Default'
+  pool: 'Default'
   strategy:
     matrix:
       Python27:
@@ -43,7 +43,7 @@ jobs:
 
 - job: 'Publish'
   dependsOn: 'Test'
-  pool:'Default'
+  pool: 'Default'
 
   steps:
   - task: UsePythonVersion@0
